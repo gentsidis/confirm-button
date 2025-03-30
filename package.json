@@ -1,7 +1,7 @@
 {
   "name": "@gentsidis/quasar-app-extension-confirm-button",
   "version": "0.0.1",
-  "description": "A Quasar Project",
+  "description": "A Quasar Button that provides the confirmation functionality",
   "author": "gentsidis <gentsidis@gmail.com>",
   "license": "MIT",
   "type": "module",
