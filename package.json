@@ -1,7 +1,10 @@
 {
   "name": "@gentsidis/quasar-app-extension-confirm-button",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Quasar Button that provides the confirmation functionality",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/gentsidis/confirm-button.git"
@@ -16,7 +19,6 @@
     "yarn": ">= 1.6.0"
   },
   "peerDependencies": {
-    "quasar": "^2.0.0",
-    "@quasar/app": "^3.0.0"
+    "quasar": "^2.0.0"
   }
 }
