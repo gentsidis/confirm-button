@@ -55,6 +55,8 @@ const deleteMsg = () => props.lang==='el' ? 'Ζήτησες τη διαγραφ�
 const translatedYes = () => props.lang==='el' ? 'Ναι' : 'Yes'
 const translatedNo = () => props.lang==='el' ? 'Όχι' : 'No'
 
+let dismissedByUser = false
+
 const handleClick = () => {
       Notify.create({
         type: props.type,
