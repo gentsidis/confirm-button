@@ -13,13 +13,13 @@
 
 # Install
 ```bash
-quasar ext add confirm-button
+quasar ext add @gentsidis/confirm-button
 ```
 Quasar CLI will retrieve it from NPM and install the extension.
 
 # Uninstall
 ```bash
-quasar ext remove confirm-button
+quasar ext remove @gentsidis/confirm-button
 ```
 
 ## Props & Customization
