@@ -1,12 +1,14 @@
 <template>
   <q-btn :disable="disabled" @click="handleClick()" :color="color" :text-color="textColor">
     <q-icon v-if="icon" :name="icon" />
-    {{ `${props.label.toUpperCase()}` }}
+    {{ `${props.label.toUpperCase()}`}}
   </q-btn>
 </template>
 
 <script setup lang="ts">
 import { QBtn, QIcon, Notify } from 'quasar'
+import { useI18n } from 'vue-i18n'
+const { locale }  = useI18n()
 
 const emit = defineEmits(['dismissed', 'confirmed', 'cancelled'])
 
@@ -41,22 +43,21 @@ const props = defineProps({
   label: { type: String, default: '' },
   labelYes: { type: String, default: null },
   labelNo: { type: String, default: null },
-  lang: { type: String, default: 'en-US' },
   disabled: { type: Boolean, default: false },
 })
 
 // Translations
-const areYouSure = () => props.lang==='el' ? 'Είσαι σίγουρος;' : 'Are you sure?'
-const deleteMsg = () => props.lang==='el' ? 'Ζήτησες τη διαγραφή αυτού του στοιχείου' : 'You asked the deletion of this element'
-const translatedYes = () => props.lang==='el' ? 'Ναι' : 'Yes'
-const translatedNo = () => props.lang==='el' ? 'Όχι' : 'No'
+const areYouSure = () => locale.value==='el' ? 'Είσαι σίγουρος;' : 'Are you sure?'
+const deleteMsg = () => locale.value==='el' ? 'Ζήτησες τη διαγραφή αυτού του στοιχείου' : 'You asked the deletion of this element'
+const translatedYes = () => locale.value==='el' ? 'Ναι' : 'Yes'
+const translatedNo = () => locale.value==='el' ? 'Όχι' : 'No'
 
 let dismissedByUser = false
 
 const handleClick = () => {
       Notify.create({
         type: props.type,
-        color: props.color,
+        color: props.notifyColor,
         textColor: props.notifyTextColor,
         icon: props.notifyIcon,
         iconColor: props.iconColor,

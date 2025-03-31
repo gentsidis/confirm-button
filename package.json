@@ -1,6 +1,6 @@
 {
   "name": "@gentsidis/quasar-app-extension-confirm-button",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "A Quasar Button that provides the confirmation functionality",
   "publishConfig": {
     "access": "public"

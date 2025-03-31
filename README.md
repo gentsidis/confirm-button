@@ -5,8 +5,8 @@
 ## Features
 - ✅ Simple integration with Quasar UI  
 - ✅ Default messages designed for object deletion  
-- ✅ Option to set `lang="el"` to translate default texts to Greek  
-- ✅ Customizable texts via `labelYes`, `labelNo`, `message`, and `caption` attributes  
+- ✅ Traces i18n locale to translate default texts to Greek
+- ✅ Customizable texts icons and colors
 
 [![npm](https://img.shields.io/npm/v/@gentsidis/quasar-app-extension-confirm-button.svg?label=quasar-app-extension-confirm-button)](https://www.npmjs.com/package/@gentsidis/quasar-app-extension-confirm-button)
 [![npm](https://img.shields.io/npm/dt/@gentsidis/quasar-app-extension-confirm-button.svg)](https://www.npmjs.com/package/@gentsidis/quasar-app-extension-confirm-button)
@@ -49,7 +49,6 @@ These props control the appearance and behavior of the **confirmation prompt**:
 | `caption`     | `String`  | `null`      | Additional caption below the message. |
 | `labelYes`    | `String`            | `''`        | Label for the "Yes" confirmation button. |
 | `labelNo`     | `String`            | `''`        | Label for the "No" cancel button. |
-| `lang`        | `String`            | `'en-US'`   | Set to `'el'` for Greek messages or provide custom texts. |
 | `notifyIcon`  | `String`            | `''`        | Icon displayed in the notification. |
 | `iconColor`   | `String`            | `'primary'` | Color of the icon in the confirmation dialog. |
 | `avatar`      | `String`            | `''`        | URL or name of an avatar image inside the dialog. |
