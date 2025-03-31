@@ -8,8 +8,8 @@
 - ✅ Option to set `lang="el"` to translate default texts to Greek  
 - ✅ Customizable texts via `labelYes`, `labelNo`, `message`, and `caption` attributes  
 
-[![npm](https://img.shields.io/npm/v/quasar-app-extension-confirm-button.svg?label=quasar-app-extension-confirm-button)](https://www.npmjs.com/package/quasar-app-extension-confirm-button)
-[![npm](https://img.shields.io/npm/dt/quasar-app-extension-confirm-button.svg)](https://www.npmjs.com/package/quasar-app-extension-confirm-button)
+[![npm](https://img.shields.io/npm/v/@gentsidis/quasar-app-extension-confirm-button.svg?label=quasar-app-extension-confirm-button)](https://www.npmjs.com/package/@gentsidis/quasar-app-extension-confirm-button)
+[![npm](https://img.shields.io/npm/dt/@gentsidis/quasar-app-extension-confirm-button.svg)](https://www.npmjs.com/package/@gentsidis/quasar-app-extension-confirm-button)
 
 # Install
 ```bash
@@ -24,7 +24,7 @@ quasar ext remove @gentsidis/confirm-button
 
 ## Props & Customization
 
-The `q-confirm-button` component provides a range of customizable props. **All props are optional**, and the component will work with default values if not provided.
+The `confirm-button` component provides a range of customizable props. **All props are optional**, and the component will work with default values if not provided.
 
 ### 1️⃣ Button Props
 These props affect the **button appearance and behavior**:
@@ -34,6 +34,8 @@ These props affect the **button appearance and behavior**:
 | `icon`        | `String`            | `'delete'`  | Icon displayed inside the button. |
 | `label`       | `String`            | `''`        | Button text. No text for a icon-only button. |
 | `disabled`    | `Boolean`           | `false`     | Disables the button if set to `true`. |
+| `color`       | `String`            | `'negative'` | Button color |
+| `textColor`       | `String`            | `'primary'` | Button text color |
 
 ### 2️⃣ Confirmation Dialog Props
 These props control the appearance and behavior of the **confirmation prompt**:
@@ -41,8 +43,8 @@ These props control the appearance and behavior of the **confirmation prompt**:
 | Prop           | Type                | Default     | Description |
 |---------------|---------------------|------------|-------------|
 | `type`        | `String`            | `'warning'` | Type of the confirmation dialog (e.g., `'info'`, `'warning'`, `'negative'`). |
-| `color`       | `String`            | `'warning'` | Background color of the confirmation dialog. |
-| `textColor`   | `String`            | `'primary'` | Text color inside the confirmation dialog. |
+| `notifyColor`       | `String`            | `'warning'` | Background color of the confirmation dialog. |
+| `notifyTextColor`   | `String`            | `'primary'` | Text color inside the confirmation dialog. |
 | `message`     | `String`  | `null`      | Custom confirmation message. Defaults to a deletion message. |
 | `caption`     | `String`  | `null`      | Additional caption below the message. |
 | `labelYes`    | `String`            | `''`        | Label for the "Yes" confirmation button. |
@@ -68,7 +70,7 @@ These props control the appearance and behavior of the **confirmation prompt**:
 
 ## 🔄 Emits (Events)
 
-The `q-confirm-button` component emits events when the confirmation dialog is used. You can listen to these events to trigger actions in your app.
+The `confirm-button` component emits events when the confirmation dialog is used. You can listen to these events to trigger actions in your app.
 
 | Event Name   | Payload | Description |
 |-------------|---------|-------------|
@@ -80,7 +82,7 @@ The `q-confirm-button` component emits events when the confirmation dialog is us
 
 ### 🎯 **Example Usage**
 ```html
-<q-confirm-button 
+<confirm-button 
   label="Delete"
   icon="warning"
   color="red"
