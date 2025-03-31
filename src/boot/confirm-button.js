@@ -1,7 +1,6 @@
-import { boot } from 'quasar'
+import { defineComponent } from 'vue'
 import ConfirmButton from '../components/ConfirmButton.vue'
 
-export default boot(({ app }) => {
-  app.component('ConfirmButton', ConfirmButton)
-})
-
+export default async ({ app }) => {
+  app.component('ConfirmButton', defineComponent(ConfirmButton))
+}
